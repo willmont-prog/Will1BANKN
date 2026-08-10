@@ -45,8 +45,30 @@
            <p class="artigo-autor"> Por: Willian Monteiro</p>
            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas e curiosidades da área de tecnologia.</p>
            <button>❤️ <span>0</span></button>
+           <button>👍 <span>0</span></button>
+        </div>
+             <img src="imagem-blog.png" alt="Ícone minimalista de tecnologia e educação com fundo branco e ilustrações na cor azul escuro. A imagem mostra um tablet integrado a elementos como um livro aberto, um chapéu de formatura (capelo), circuitos eletrônicos, um braço robótico e um átomo, simbolizando aprendizado digital e inovação.">
+        <div>
+           <h2>Meu primeiro post</h2>
+           <p class="artigo-autor"> Por: Willian Monteiro</p>
+           <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas e curiosidades da área de tecnologia.</p>
+           <button>❤️ <span>0</span></button>
+           <button>👍 <span>0</span></button>
         </div> 
        </main>
 </body>
+<script>
+    const botoes = document.querySelectorAll("button");
 
+    botoes.forEach(function(botao){
+        botao.addEventListener("click", botaoCLicado);
+        
+        function botaoCLicado(){
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    })
+
+</script>
 </html>
